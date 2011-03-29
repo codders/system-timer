@@ -14,6 +14,7 @@
 #define DO_NOT_DISPLAY_ERRNO 0
 #define MICRO_SECONDS 1000000.0
 #define MINIMUM_TIMER_INTERVAL_IN_SECONDS 0.2
+#define RT_SIGNAL_ID 10
 
 VALUE rb_cSystemTimer;
 
@@ -269,7 +270,7 @@ static void clear_pending_sigalrm_for_ruby_threads()
 static void init_sigalarm_mask() 
 {
     sigemptyset(&sigalarm_mask);
-    sigaddset(&sigalarm_mask, SIGALRM);
+    sigaddset(&sigalarm_mask, SIGRTMIN + RT_SIGNAL_ID);
     return;
 }
 

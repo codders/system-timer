@@ -14,8 +14,8 @@ CLOBBER.include '**/*.log'
 CLOBBER.include '**/Makefile'
 CLOBBER.include '**/extconf.h'
 
-SYSTEM_TIMER_VERSION = "1.2.3"
-SYSTEM_TIMER_GEM_NAME = "SystemTimer"
+SYSTEM_TIMER_VERSION = "1.2.3.1"
+SYSTEM_TIMER_GEM_NAME = "codders-SystemTimer"
 
 desc 'Default: run unit tests.'
 task :default => :test
